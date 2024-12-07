@@ -1,0 +1,122 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@font-face {
+    font-family: 'Young Serif';
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+:root {
+    --font-family-main: 'Outfit', sans-serif;
+    --font-family-heading: 'Young Serif', sans-serif;
+    --font-size-main: 1rem;
+    --font-size-heading: 1.75;
+    --font-weight-400: 400;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+body {
+    font-family: var(--font-family-main);
+    font-weight: var(--font-weight-400);
+    background: var(--stone-100);   
+    color: var(--stone-900);
+    line-height: 2.25em;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+h1, h2 {
+    font-family: var(--font-family-heading);
+}
+
+hr {
+    margin-top: 1.5em;
+}
+
+p {
+    font-size: 1.1rem;
+} 
+
+li {
+    line-height: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.ingredients__title, .instructions__title, .nutrition__title {
+    color: var(--brown-800);
+    font-weight: var(--font-weight-400);
+    font-size: 1.75rem;
+    margin-bottom: 0;
+}
+
+.nutrition__description {
+    margin-bottom: .25em;
+}
+
+.preparation-section {
+    background: var(--rose-50);
+    border-radius: 10px;
+}
+
+.preparation__title {
+    color: var(--rose-800);
+}
+
+.recipe-card {
+    background: var(--white);
+    max-width: 45em;
+    padding: 1.75rem;
+    margin: 5rem 0;
+    border-radius: 25px;
+}
+
+.recipe__description {
+    line-height: 1.75em;
+}
+
+.preparation__list > li::marker {
+    color: var(--rose-800);
+}
+
+.recipe__list > li::marker {
+    color: var(--brown-800);
+    font-weight: var(--font-weight-700);
+}
+
+.recipe__nutrient-value {
+    color: var(--brown-800);
+}
+
+.recipe__title {
+    font-size: 2.75rem;
+    font-weight: var(--font-weight-400);
+    line-height: 1.15em;
+    margin-bottom: 0;
+}
+
+.wrapper {
+    display: grid;
+    place-items: center;
+}
+
+.recipe__list--bold {
+    font-weight: var(--font-weight-700);
+}
