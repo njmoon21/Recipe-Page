@@ -25,6 +25,7 @@
     --stone-150: hsl(30, 18%, 87%);
     --stone-600: hsl(30, 10%, 34%);
     --stone-900: hsl(24, 5%, 18%);
+    --wenge-brown: #5f574e;
     --brown-800: hsl(14, 45%, 36%);
     --rose-800: hsl(332, 51%, 32%);
     --rose-50: hsl(330, 100%, 98%);
@@ -34,7 +35,7 @@ body {
     font-family: var(--font-family-main);
     font-weight: var(--font-weight-400);
     background: var(--stone-100);   
-    color: var(--stone-900);
+    color: var(--wenge-brown);
     line-height: 2.25em;
 }
 
@@ -49,6 +50,10 @@ h1, h2 {
 
 hr {
     margin-top: 1.5em;
+    outline: none;
+    border: none;
+    height: 1px;
+    background: var(--stone-150);
 }
 
 p {
@@ -58,6 +63,23 @@ p {
 li {
     line-height: 1.6rem;
     margin-bottom: 5px;
+    padding-left: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    padding: .7rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-bottom: 1px solid var(--stone-150);
+}
+
+tr:last-child {
+    border: none;
 }
 
 .ingredients__title, .instructions__title, .nutrition__title {
@@ -74,16 +96,24 @@ li {
 .preparation-section {
     background: var(--rose-50);
     border-radius: 10px;
+    padding: 0 1.5rem;
+}
+
+.preparation__list {
+    margin: 0;
+    padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
 .preparation__title {
     color: var(--rose-800);
+    padding: 1rem 0 .5rem 0rem;
+    margin: 0
 }
 
 .recipe-card {
     background: var(--white);
     max-width: 45em;
-    padding: 1.75rem;
+    padding: 2rem;
     margin: 5rem 0;
     border-radius: 25px;
 }
@@ -94,6 +124,10 @@ li {
 
 .preparation__list > li::marker {
     color: var(--rose-800);
+}
+
+.recipe__list {
+    padding-left: 1.5rem;
 }
 
 .recipe__list > li::marker {
@@ -108,6 +142,7 @@ li {
 .recipe__title {
     font-size: 2.75rem;
     font-weight: var(--font-weight-400);
+    color: var(--stone-900);
     line-height: 1.15em;
     margin-bottom: 0;
 }
@@ -119,4 +154,26 @@ li {
 
 .recipe__list--bold {
     font-weight: var(--font-weight-700);
+}
+
+
+
+@media (max-width: 500px) {
+    body {
+        margin: 0;
+    }
+    .recipe-card {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+    .recipe-container {
+        padding: 0 2rem;
+    }
+    .recipe__title {
+        font-size: 2.3rem;
+    }
+    img {
+        border-radius: 0;
+    }
 }
